@@ -1,41 +1,28 @@
 # == Class: puppet-aws-cli
 #
-# Full description of class puppet-aws-cli here.
-#
-# === Parameters
-#
-# Document parameters here.
-#
-# [*sample_parameter*]
-#   Explanation of what this parameter affects and what it defaults to.
-#   e.g. "Specify one or more upstream ntp servers as an array."
-#
-# === Variables
-#
-# Here you should define a list of variables that this module would require.
-#
-# [*sample_variable*]
-#   Explanation of how this variable affects the funtion of this class and if
-#   it has a default. e.g. "The parameter enc_ntp_servers must be set by the
-#   External Node Classifier as a comma separated list of hostnames." (Note,
-#   global variables should be avoided in favor of class parameters as
-#   of Puppet 2.6.)
-#
-# === Examples
-#
-#  class { puppet-aws-cli:
-#    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
-#  }
+# This class ensures that python2.7 and python-pip are installed as awscli dependencies.
+# awscli is installed by this class once dependencies are installed.
 #
 # === Authors
 #
-# Author Name archautomation@pearson.com
+# Author Name tehmasp@gmail.com
 #
 # === Copyright
 #
-# Copyright (C) 2013 Pearson, Inc.
+# Copyright (C) 2013 Tehmasp Chaudhri <tehmasp@gmail.com>
 #
 class puppet-aws-cli {
 
+  $pkgs = ['python2.7', 'python-pip']
+  package { $pkgs: ensure => 'installed' }
+
+  exec { 'pip install awscli':
+    command => 'pip install awscli',
+    path    => [ '/usr/sbin', '/usr/bin', '/sbin', '/bin' ],
+    unless  => 'which aws',
+    require => Package[$pkgs],
+    user    => 'root',
+    timeout => '0',
+  }
 
 }

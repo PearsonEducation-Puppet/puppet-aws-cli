@@ -1,11 +1,11 @@
 name    'puppet-aws-cli'
-version '0.1.0'
-source 'UNKNOWN'
-author 'archautomation@pearson.com'
-license 'All Rights Reserved'
-summary 'UNKNOWN'
-description 'UNKNOWN'
-project_page 'UNKNOWN'
+version '1.0.0'
+source 'https://github.com/tehmaspc/puppet-aws-cli'
+author 'tehmasp@gmail.com'
+license 'Apache 2.0'
+summary 'Installs aws-cli'
+description 'Installs aws-cli'
+project_page 'https://github.com/tehmaspc/puppet-aws-cli'
 
 ## Add dependencies, if any:
 # dependency 'username/name', '>= 1.2.0'
