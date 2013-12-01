@@ -14,5 +14,5 @@ Platform
 License
 =======
 
-Copyright (C) 2013 Tehmasp Chaudhri <tehmasp@gmail.com>
+Copyright (C) 2013 Tehmasp Chaudhri <tehmasp@gmail.com>  
 Distributed under the Apache 2.0 License.
