@@ -1,7 +1,7 @@
-# == Class: puppet-aws-cli
+# == Class: aws_cli
 #
-# This class ensures that python2.7 and python-pip are installed as awscli dependencies.
-# awscli is installed by this class once dependencies are installed.
+# This class ensures that python2.7 and python-pip are installed as aws-cli dependencies.
+# aws-cli is installed by this class once dependencies are installed.
 #
 # === Authors
 #
@@ -11,7 +11,7 @@
 #
 # Copyright (C) 2013 Tehmasp Chaudhri <tehmasp@gmail.com>
 #
-class puppet-aws-cli {
+class aws_cli {
 
   $pkgs = ['python2.7', 'python-pip']
   package { $pkgs: ensure => 'installed' }

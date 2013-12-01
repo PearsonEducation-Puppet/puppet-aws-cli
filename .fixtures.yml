@@ -4,4 +4,4 @@ fixtures:
 # repositories:
 #   stdlib: 'git://github.com/puppetlabs/puppetlabs-stdlib'
   symlinks:
-    puppet-aws-cli: "#{source_dir}"
+    aws_cli: "#{source_dir}"

@@ -1,7 +1,7 @@
 # for rspec-puppet documentation - see http://rspec-puppet.com/tutorial/
 require_relative '../spec_helper'
 
-describe 'puppet-aws-cli' do
+describe 'aws_cli' do
   it { should contain_package('python2.7') }
   it { should contain_package('python-pip') }
 

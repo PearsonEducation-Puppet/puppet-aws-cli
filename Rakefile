@@ -30,3 +30,4 @@ task :default => :test
 
 # puppet-lint options
 PuppetLint.configuration.send('disable_80chars')
+PuppetLint.configuration.send('disable_autoloader_layout')

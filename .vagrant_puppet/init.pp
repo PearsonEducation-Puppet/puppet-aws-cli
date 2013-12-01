@@ -1,1 +1,1 @@
-include puppet-aws-cli
+include aws_cli

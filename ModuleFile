@@ -1,4 +1,4 @@
-name    'puppet-aws-cli'
+name    'tehmasp-aws_cli'
 version '1.0.0'
 source 'https://github.com/tehmaspc/puppet-aws-cli'
 author 'tehmasp@gmail.com'
