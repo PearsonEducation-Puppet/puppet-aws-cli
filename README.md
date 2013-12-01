@@ -1,10 +1,7 @@
-puppet-aws-cli
-==============
-
 Description
 ===========
 
-puppet-aws-cli - Installs aws-cli (http://aws.amazon.com/cli/)
+Installs aws-cli (http://aws.amazon.com/cli/)
 
 Platform
 --------
