@@ -5,8 +5,6 @@ describe 'aws_cli' do
   it { should contain_package('python2.7') }
   it { should contain_package('python-pip') }
 
-  it { should contain_exec('pip install awscli').with }
-
   it do
     should contain_exec('pip install awscli').with(
       'command' =>  'pip install awscli',
